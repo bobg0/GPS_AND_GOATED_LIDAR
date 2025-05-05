@@ -1,0 +1,107 @@
+{
+	"SettingsVersion": 1.2,
+	"CameraDefaults": {
+		"CaptureSettings": [
+		  {
+			"ImageType": 0,
+			"Width": 2560,
+			"Height": 1440,
+			"FOV_Degrees": 120,
+			"AutoExposureSpeed": 1200,
+			"MotionBlurAmount": 0
+		  }
+	  ]
+	},
+    "SubWindows": [
+    {"WindowID": 0, "CameraName": "0", "ImageType": 3, "VehicleName": "Drone1", "Visible": true, "External": false},
+    {"WindowID": 1, "CameraName": "0", "ImageType": 5, "VehicleName": "Drone1", "Visible": true, "External": false},
+    {"WindowID": 2, "CameraName": "0", "ImageType": 0, "VehicleName": "Drone1", "Visible": true, "External": false}
+    ],
+	"SimMode": "Multirotor",
+    "SegmentationSettings": {
+    "InitMethod": "",
+    "MeshNamingMethod": "",
+    "OverrideExisting": true
+  },
+	"Vehicles": {
+        "Drone1": {
+            "VehicleType": "SimpleFlight",
+            "AutoCreate": true,
+            "Sensors": {
+                "LidarSensor2": {
+                   "SensorType": 6,
+                    "Enabled" : true,
+                    "NumberOfChannels": 512,
+                    "RotationsPerSecond": 50,
+                    "PointsPerSecond": 10000, 
+                    "X": 0, "Y": 0, "Z": 0,
+                    "Roll": 0, "Pitch": 90, "Yaw" : 0,
+                    "VerticalFOVUpper": -179.999,
+                    "VerticalFOVLower": 179.999,
+                    "DrawDebugPoints": true,
+                    "DataFrame": "SensorLocalFrame"
+                }
+            },
+            "EnableCollisionPassthrough": true,
+            "X": 0,  
+            "Y": 0,  
+            "Z": 0,  
+            "Visible": true,
+            "Cameras": {
+                "PIPCamera": {
+                    "X": 0,   
+                    "Y": 0,   
+                    "Z": -0.5,   
+                    "Pitch": -10, 
+                    "Roll": 0,
+                    "Yaw": 0
+                }
+            }
+        },
+        "Drone2": {
+            "VehicleType": "SimpleFlight",
+            "AutoCreate": true,
+            "Sensors": {
+                "LidarSensor2": {
+                   "SensorType": 6,
+                    "Enabled" : false,
+                    "NumberOfChannels": 32,
+                    "RotationsPerSecond": 10,
+                    "PointsPerSecond": 10000,
+                    "X": 0, "Y": 0, "Z": 0,
+                    "Roll": 0, "Pitch": 0, "Yaw" : 0,
+                    "VerticalFOVUpper": -89,
+                    "VerticalFOVLower": -91,
+                    "DrawDebugPoints": true,
+                    "DataFrame": "SensorLocalFrame"
+                },
+                "Imu": {
+                    "SensorType": 2,
+                    "Enabled": true,
+                    "AngularRandomWalk": 0.0,
+                    "GyroBiasStabilityTau": 1e9,
+                    "GyroBiasStability": 0.0,
+                    "VelocityRandomWalk": 0.0,
+                    "AccelBiasStabilityTau": 1e9,
+                    "AccelBiasStability": 0.0
+                }
+
+            },
+            "EnableCollisionPassthrough": true,
+            "X": 5,  
+            "Y": 0,  
+            "Z": 0,  
+            "Visible": true,
+            "Cameras": {
+                "PIPCamera": {
+                    "X": 0,   
+                    "Y": 1.5,   
+                    "Z": -0.5,   
+                    "Pitch": -10, 
+                    "Roll": 0,
+                    "Yaw": 0
+                }
+            }
+        }
+	  }
+  }
